@@ -1,0 +1,49 @@
+@use "sass:math";
+@use "sass:color";
+
+:root {
+
+    --base-font-size: 16px;
+    --small-font-size: 14px;
+
+    --step: 1.06;
+    --font-size: 16px;
+    --line-height: 1.8;
+    --small: 0.6em;
+    --large: 1.4em;
+    --transition: 0.2s;
+    --header-offset: 100px;
+    --gap: 20px;
+    --radius: 0.6em;
+    --radius-inner: 0.3em;
+    --width-limit: 1380px;
+    --section-space: 40px;
+    --margin: 1.8em;
+    --padding: 20px;
+    --shadow: -2px -2px 5px -4px rgba(3, 2, 2, 0.1), 4px 4px 20px -4px rgba(3, 2, 2, 0.3);
+    --shadow-2: 0 0 50px rgba(3, 2, 2, 0.3);
+
+
+
+    --color-light-glass: rgba(255, 254, 254, 0.8);
+    --color-dark-glass: rgba(38, 32, 32, 0.8);
+    --color-super-white: #fff;
+    --color-white: rgb(244, 242, 238);
+    --color-black: rgb(62, 58, 57);
+
+    --color-body: var(--color-super-white);
+    --color-text: var(--color-black);
+
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%);
+
+    --font-cherry-bomb: "Cherry Bomb One", cursive;
+    --font-tsukimi: "Tsukimi Rounded", serif;
+    --font-noto-sans: "Noto Sans JP", sans-serif;
+    --font-noto-serif: "Noto Serif JP", serif;
+}

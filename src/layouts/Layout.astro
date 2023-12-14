@@ -1,0 +1,40 @@
+---
+import Head from "@components/Head.astro";
+import Navigation from "@components/Navigation.astro";
+import Footer from "@components/Footer.astro";
+
+import "@assets/styles/common.scss";
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <Head title={title} description={description} />
+  </head>
+  <body>
+    <Navigation />
+    <slot />
+    <Footer />
+    <style is:global lang="scss">
+      html {
+        font-family: system-ui, sans-serif;
+        background: #c2c4ca;
+        background-size: 224px;
+      }
+      .fontNotoSerif {
+        font-family: var(--font-noto-serif);
+      }
+      h1 {
+        font-family: var(--font-noto-serif);
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

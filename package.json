@@ -1,0 +1,16 @@
+{
+  "name": "astro-dev-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --open",
+    "start": "astro dev",
+    "build": "astro build && npm run preview",
+    "preview": "astro preview --open --port 4322",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.0.4",
+    "sass": "^1.69.5"
+  }
+}

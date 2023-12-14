@@ -1,0 +1,124 @@
+// Define the breakpoints for larger screens
+$breakpoint-xxl: 1536px;
+$breakpoint-xl: 1280px;
+$breakpoint-lg: 1024px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 640px;
+$breakpoint-xs: 380px;
+
+// 1536px
+@mixin xxl {
+    @media only screen and (max-width:$breakpoint-xxl) {
+        @content;
+    }
+}
+
+// 1280px
+@mixin xl {
+
+    @media only screen and (max-width:$breakpoint-xl) {
+        @content;
+    }
+}
+
+// 1024px
+@mixin lg {
+    @media only screen and (max-width:$breakpoint-lg) {
+        @content;
+    }
+}
+
+// 768px
+@mixin md {
+    @media only screen and (max-width:$breakpoint-md) {
+        @content;
+    }
+}
+
+// 640px
+@mixin sm {
+    @media only screen and (max-width:$breakpoint-sm) {
+        @content;
+    }
+}
+
+// 380px
+@mixin xs {
+    @media only screen and (max-width:$breakpoint-xs) {
+        @content;
+    }
+}
+
+// Custom devices
+
+@mixin cb-max-min($maxWidth, $minWidth) {
+    @media only screen and (max-width: "#{$maxWidth}px") and (min-width: "#{$minWidth}px") {
+        @content;
+    }
+}
+
+@mixin max-width($screen) {
+    @media only screen and (max-width:$screen) {
+        @content;
+    }
+}
+
+
+@mixin min-width($screen) {
+    @media only screen and (min-width:$screen) {
+        @content;
+    }
+}
+
+@mixin max-height($screen) {
+    @media only screen and (max-height:$screen) {
+        @content;
+    }
+}
+
+@mixin min-height($screen) {
+    @media only screen and (min-height:$screen) {
+        @content;
+    }
+}
+
+@mixin iphone14ProMaxLandscape {
+    @media only screen and (max-width: 999px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin ipadAndAbove {
+
+    @media only screen and (min-width: 1030px) and (min-height: 800px) and (orientation: landscape),
+    only screen and (min-width: 800px) and (min-height: 1030px) and (orientation: portrait) {
+        @content;
+    }
+
+    @include ipadMiniLandscape {
+        @content;
+    }
+}
+
+@mixin ipadMiniLandscape {
+    @media only screen and (min-width: 1000px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+
+
+// Define the breakpoint for landscape orientation
+// Mixin for landscape orientation
+@mixin landscape {
+    @media (orientation: landscape) {
+        @content;
+    }
+}
+
+// Mixin for portrait orientation
+@mixin portrait {
+    @media (orientation: portrait) {
+        @content;
+    }
+}

@@ -1,0 +1,44 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import { Image, Picture } from "astro:assets";
+
+import myImage from "@assets/images/img.webp";
+---
+
+<Layout title="About | Welcome to Astro">
+  <h1>About Page</h1>
+  <div>
+    <!-- <video autoplay muted loop>
+      <source src="/videos/header.mp4" type="video/mp4" />
+    </video> -->
+    <h2>img element from pulic/</h2>
+    <img src="/images/img.webp" alt="Image" />
+
+    <h2>Image Element</h2>
+    <Image src={myImage} height={300} alt="my Image" />
+
+    <h2>Picture Element</h2>
+    <Picture
+      src={myImage}
+      height={300}
+      formats={["avif", "webp"]}
+      alt="my image"
+    />
+  </div>
+</Layout>
+
+<style lang="scss">
+  @use "@assets/styles/_mixins.scss" as *;
+
+  div {
+    padding-top: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 10px solid green;
+
+    @include sm {
+      max-width: 100%;
+    }
+  }
+</style>
