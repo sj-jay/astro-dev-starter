@@ -1,14 +1,16 @@
-# Astro Starter Kit: Minimal
+# Astro Starter Kit: Basics
 
 ```sh
-npm create astro@latest -- --template minimal
+git clone https://github.com/sj-jay/astro-dev-starter
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
 ## 🚀 Project Structure
 
@@ -17,9 +19,31 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
+│   └── ... (your static files)
+│   └── favicon.svg
 ├── src/
+|   ├── assets/
+│   │   └── styles/
+│   │   │    └── mixins
+│   │   │       └── _breakpoints.scss
+│   │   │       └── _helpers.scss
+│   │   │    └── _fontFace.scss
+│   │   │   └── _mixins.scss
+│   │   │   └── _variables.scss
+│   │   │   └── reset.scss
+│   │   │   └── common.scss
+│   │   └── images/
+│   │   └── js/
+│   │   
+│   ├── components/
+│   │   └── Navigation.astro
+│   │   └── Footer.astro
+│   ├── layouts/
+│   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
+│       └── about/
+│           └── index.astro
 └── package.json
 ```
 
